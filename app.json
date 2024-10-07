@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "tldraw-ipad",
+    "slug": "tldraw-ipad",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pvinis.tldrawipad"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.pvinis.tldrawipad"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "34d17fcf-a1fa-4623-ae63-d5d132b3b1b6"
+      }
+    },
+    "owner": "pvinis",
+    "updates": {
+      "url": "https://u.expo.dev/34d17fcf-a1fa-4623-ae63-d5d132b3b1b6"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
