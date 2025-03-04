@@ -3,7 +3,7 @@ import { ExpoConfig } from "expo/config"
 const config: ExpoConfig = {
   name: "tldraw-ipad",
   slug: "tldraw-ipad",
-  icon: "./assets/images/app-icon.jpg",
+  icon: "./assets/images/app-icon.png",
   version: "0.1.0",
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
@@ -11,7 +11,7 @@ const config: ExpoConfig = {
   ios: {
     bundleIdentifier: "com.pvinis.tldraw-ipad",
     supportsTablet: true,
-    // appleTeamId: "2Q3HA5463Z", ///////
+    appleTeamId: "CAG2W9M777",
     config: { usesNonExemptEncryption: false },
   },
   orientation: "portrait",

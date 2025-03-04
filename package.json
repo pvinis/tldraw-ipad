@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "expo start",
-    "ios": "expo start --ios",
+    "ios": "expo run:ios",
     "doctor": "bun x expo-doctor@latest",
     "doctor:fix": "expo install --check",
     "typecheck": "tsc --noEmit",
@@ -14,7 +14,8 @@
     "build:all": "bun build:dev --no-wait ; bun build:devdevice --no-wait ; bun build:prod --no-wait",
     "devclient:ios": "bun eas build:run -p ios --latest -e development",
     "submit": "bun eas submit --platform all",
-    "eas": "bun x eas-cli@latest"
+    "eas": "bun x eas-cli@latest",
+    "android": "expo run:android"
   },
   "jest": {
     "preset": "jest-expo"
@@ -38,9 +39,9 @@
     "react-native-gesture-handler": "~2.20.2",
     "react-native-mmkv": "^3.2.0",
     "react-native-reanimated": "3.16.2",
-    "react-native-safe-area-context": "^5.2.0",
+    "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "~4.4.0",
-    "react-native-webview": "^13.13.2",
+    "react-native-webview": "13.12.5",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
