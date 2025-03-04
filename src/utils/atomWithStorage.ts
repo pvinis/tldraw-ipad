@@ -1,8 +1,8 @@
 import {
   atomWithStorage as atomWithStorageOrig,
   createJSONStorage,
-} from "jotai/utils";
-import { MMKVStorage } from "./mmkvStorage";
+} from "jotai/utils"
+import { MMKVStorage } from "./mmkvStorage"
 
 export const atomWithStorage = <T>(key: string, initialValue: T) =>
   atomWithStorageOrig<T>(
@@ -14,5 +14,5 @@ export const atomWithStorage = <T>(key: string, initialValue: T) =>
       removeItem: MMKVStorage.removeItem,
       clearAll: MMKVStorage.clearAll,
     })),
-    { getOnInit: true }
-  );
+    { getOnInit: true },
+  )
