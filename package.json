@@ -5,8 +5,16 @@
   "scripts": {
     "dev": "expo start",
     "ios": "expo start --ios",
-    "test": "jest --watchAll",
-    "lint": "expo lint"
+    "doctor": "bun x expo-doctor@latest",
+    "doctor:fix": "expo install --check",
+    "typecheck": "tsc --noEmit",
+    "build:dev": "bun eas build --platform all --profile development --non-interactive",
+    "build:devdevice": "bun eas build --platform all --profile development-device --non-interactive",
+    "build:prod": "bun eas build --platform all --non-interactive --auto-submit",
+    "build:all": "bun build:dev --no-wait ; bun build:devdevice --no-wait ; bun build:prod --no-wait",
+    "devclient:ios": "bun eas build:run -p ios --latest -e development",
+    "submit": "bun eas submit --platform all",
+    "eas": "bun x eas-cli@latest"
   },
   "jest": {
     "preset": "jest-expo"
@@ -14,6 +22,7 @@
   "dependencies": {
     "expo": "~52.0.37",
     "expo-constants": "~17.0.7",
+    "expo-dev-client": "^5.0.12",
     "expo-font": "~13.0.4",
     "expo-haptics": "~14.0.1",
     "expo-linking": "~7.0.5",
