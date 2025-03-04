@@ -12,7 +12,7 @@
     "build:devdevice": "bun eas build --platform ios --profile development-device --non-interactive",
     "build:prod": "bun eas build --platform ios --non-interactive --auto-submit",
     "build:all": "bun build:dev --no-wait ; bun build:devdevice --no-wait ; bun build:prod --no-wait",
-    "devclient:ios": "bun eas build:run -p ios --latest -e development",
+    "devclient": "bun eas build:run -p ios --latest -e development",
     "submit": "bun eas submit --platform ios",
     "eas": "bun x eas-cli@latest",
     "android": "expo run:android"
