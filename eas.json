@@ -1,47 +1,37 @@
 {
   "cli": {
-    "version": ">= 12.5.1",
+    "version": ">= 13.0.0",
+    "promptToConfigurePushNotifications": false,
     "appVersionSource": "remote"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal",
-      "android": {
-        "image": "latest"
-      },
-      "ios": {
-        "image": "latest"
-      }
-    },
-    "development-simulator": {
-      "extends": "development",
-      "ios": {
-        "simulator": true
-      }
+    "production": {
+      "bun": "1.2.4",
+      "ios": { "image": "latest" },
+      "autoIncrement": true
     },
     "preview": {
-      "distribution": "internal",
-      "channel": "main",
-      "android": {
-        "image": "latest"
-      },
-      "ios": {
-        "image": "latest"
-      }
+      "extends": "production",
+      "distribution": "internal"
     },
-    "production": {
-      "channel": "production",
-      "autoIncrement": true,
-      "android": {
-        "image": "latest"
-      },
-      "ios": {
-        "image": "latest"
-      }
+    "development": {
+      "extends": "production",
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": { "simulator": true }
+    },
+    "development-device": {
+      "extends": "development",
+      "ios": { "simulator": false }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "pvinis@gmail.com",
+        "appleTeamId": "CAG2W9M777",
+        "ascAppId": "6742800447"
+      }
+    }
   }
 }
